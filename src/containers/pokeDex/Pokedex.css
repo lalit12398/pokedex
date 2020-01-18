@@ -1,0 +1,176 @@
+.Pokedex {
+    width: 70%;
+    margin: 20px 15%;
+    background-color: #c1c1c14d;
+    float: left;
+}
+
+.Pokedex .poke-list {
+    list-style-type: none;
+    width: 230px;
+    float: left;
+    margin: 20px 10px;
+    height: 320px;
+    transition: all 0.2s ease-in-out;
+    transition-property: transform, box-shadow;
+    position: relative;
+
+}
+
+.PokeCard {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.PokeCard .poke-card-wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+.poke-card-wrap div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.poke-card-wrap .poke-card-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.Pokedex .poke-list .outline {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Pokedex input {
+    display: none;
+}
+
+:checked + .poke-card-wrap {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.Pokedex .poke-list:hover {
+    box-shadow: 10px 10px 30px 3px;
+    transform: translate(0px, -10px);
+}
+
+.poke-card-back h3{
+    margin: 5px 0;
+}
+
+/* Pokemon card colors */
+.Pokedex .poison {
+    background-color: #b97fc9;
+}
+
+.Pokedex .ground {
+    background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background-color: #f7de3f;
+}
+
+.Pokedex .fire {
+    background-color: #fd7d24;
+}
+
+.Pokedex .water {
+    background-color: #4592c4;
+}
+
+.Pokedex .electric {
+    background-color: #eed535;
+}
+
+.Pokedex .normal {
+    background-color: #a4acaf;
+}
+
+.Pokedex .bug {
+    background-color: #729f3f;
+}
+
+.Pokedex .fairy {
+    background-color: #fdb9e9;
+}
+
+.Pokedex .flying {
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+    background-color: #3dc7ef;
+}
+
+.Pokedex .grass {
+    background: linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+    background-color: #9bcc50;
+}
+
+.Pokedex .fighting {
+    background: linear-gradient(180deg, #d56723 50%, #d56723 50%);
+    background-color: #d56723;
+}
+
+.Pokedex .psychic {
+    background: linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+    background-color: #f366b9;
+}
+
+.Pokedex .steel {
+    background: linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+    background-color: #9eb7b8;
+}
+
+.Pokedex .ice {
+    background: linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+    background-color: #51c4e7;
+}
+
+.Pokedex .rock {
+    background: linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+    background-color: #a38c21;
+}
+
+.Pokedex .ghost {
+    background: linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+    background-color: #7b62a3;
+}
+
+.Pokedex .dark {
+    background: linear-gradient(180deg, #707070 50%, #707070 50%);
+    background-color: #707070;
+}
+
+/* Pokemon card colors end */
+
+.Pokedex h3 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+.Pokedex .poke-type {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
